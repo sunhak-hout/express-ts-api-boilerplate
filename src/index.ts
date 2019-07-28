@@ -1,4 +1,4 @@
-import { app } from './libs/app';
+import { app } from "@libs/app";
 
 const { PORT } = process.env;
 

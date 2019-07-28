@@ -1,6 +1,6 @@
+import { PostsController } from '@controllers/PostsController';
+import { UsersController } from '@controllers/UsersController';
 import { Router } from 'express';
-import { PostsController } from './controllers/PostsController';
-import { UsersController } from './controllers/UsersController';
 
 export const router = Router();
 

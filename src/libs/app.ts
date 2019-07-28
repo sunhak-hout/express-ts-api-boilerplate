@@ -1,9 +1,9 @@
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import express from 'express';
-
 import { errorHandler } from './errorHandler';
-import { router } from '../routers';
+import { router } from '../../src/routers';
+
 
 export const app = express();
 

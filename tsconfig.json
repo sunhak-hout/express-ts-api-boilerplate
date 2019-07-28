@@ -8,9 +8,10 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "outDir": "dist",
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
-      "@": ["./src"]
+      "@controllers/*": ["./src/controllers/*"],
+      "@libs/*": ["./src/libs/*"]
     }
   },
   "include": ["src"],
