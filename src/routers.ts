@@ -16,8 +16,8 @@ router.delete('/users/:userId', UsersController.destroy);
 // PostsController Routers
 router.get('/posts', PostsController.index);
 router.post('/posts', PostsController.new);
-router.put('/posts/:userId', PostsController.edit);
-router.delete('/posts/:userId', PostsController.destroy);
+router.put('/posts/:postId', PostsController.edit);
+router.delete('/posts/:postId', PostsController.destroy);
 
 // 404 Route Not Found
 router.all('*', (req, res) => {
