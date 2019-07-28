@@ -1,5 +1,5 @@
-import { PostsController } from '@controllers/PostsController';
-import { UsersController } from '@controllers/UsersController';
+import * as PostsController from '@controllers/PostsController';
+import * as UsersController from '@controllers/UsersController';
 import { Router } from 'express';
 
 export const router = Router();
@@ -9,13 +9,13 @@ router.get('/ping', (req, res) => res.json({ msg: 'PONG' }));
 
 // UsersController Routers
 router.get('/users', UsersController.index);
-router.post('/users', UsersController.new);
+router.post('/users', UsersController.create);
 router.put('/users/:userId', UsersController.edit);
 router.delete('/users/:userId', UsersController.destroy);
 
 // PostsController Routers
 router.get('/posts', PostsController.index);
-router.post('/posts', PostsController.new);
+router.post('/posts', PostsController.create);
 router.put('/posts/:postId', PostsController.edit);
 router.delete('/posts/:postId', PostsController.destroy);
 

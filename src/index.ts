@@ -1,5 +1,9 @@
-import { app } from "@libs/app";
+import { app } from '@libs/app';
+import { initDB } from '@libs/db';
 
 const { PORT } = process.env;
 
-app.listen(PORT, () => console.log(`App running on port: ${PORT}`));
+(async function main() {
+  await initDB();
+  app.listen(PORT, () => console.log(`App running on port: ${PORT}`));
+})();

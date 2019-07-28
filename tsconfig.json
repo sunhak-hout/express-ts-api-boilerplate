@@ -11,7 +11,10 @@
     "baseUrl": ".",
     "paths": {
       "@controllers/*": ["./src/controllers/*"],
-      "@libs/*": ["./src/libs/*"]
+      "@libs/*": ["./src/libs/*"],
+      "@services/*": ["./src/services/*"],
+      "@models": ["./src/models.ts"],
+      "@routers": ["./src/routers.ts"]
     }
   },
   "include": ["src"],
