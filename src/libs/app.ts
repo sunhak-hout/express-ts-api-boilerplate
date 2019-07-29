@@ -2,9 +2,13 @@ import { router } from '@routers';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import express from 'express';
+import morgan from 'morgan';
 import { errorHandler } from './errors';
 
 export const app = express();
+
+// Middleware: Log Request
+app.use(morgan('tiny'));
 
 // Middlware: Parsing req.body into JSON
 app.use(bodyParser.json());
