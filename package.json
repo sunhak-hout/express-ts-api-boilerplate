@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "nodemon",
-    "prod": "rm -rf dist && tsc && nodemon dist/index.js"
+    "prod": "rm -rf dist && tsc && NODE_ENV=production node dist/index.js"
   },
   "author": "https://github.com/sunhak-hout",
   "repository": "https://github.com/sunhak-hout/express-ts-api-boilerplate",
@@ -17,6 +17,7 @@
   "devDependencies": {
     "@types/cors": "^2.8.5",
     "@types/express": "^4.17.0",
+    "@types/module-alias": "^2.0.0",
     "@types/mongoose": "^5.5.11",
     "module-alias": "^2.2.0",
     "nodemon": "^1.19.1",
@@ -28,17 +29,10 @@
       "src"
     ],
     "ext": "ts",
-    "exec": "ts-node -r dotenv/config -r module-alias/register src/index.ts"
+    "exec": "NODE_ENV=development ts-node src/index.ts"
   },
   "prettier": {
     "singleQuote": true,
     "trailingComma": "all"
-  },
-  "_moduleAliases": {
-    "@controllers": "./src/controllers/",
-    "@libs": "./src/libs/",
-    "@services": "./src/services/",
-    "@models": "./src/models.ts",
-    "@routers": "./src/routers.ts"
   }
 }
