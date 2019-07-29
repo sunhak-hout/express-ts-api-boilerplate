@@ -1,3 +1,4 @@
+import PingController from '@controllers/PingController';
 import PostsController from '@controllers/PostsController';
 import UsersController from '@controllers/UsersController';
 import { Router } from 'express';
@@ -5,7 +6,7 @@ import { Router } from 'express';
 export const router = Router();
 
 // Server Health Check
-router.get('/ping', (req, res) => res.json({ msg: 'PONG' }));
+router.get('/ping', PingController.ping);
 
 // UsersController Routers
 router.get('/users', UsersController.index);
