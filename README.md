@@ -1,16 +1,16 @@
 # ExpressJS + Typescript (Boilerplate)
 
-All you have been looking for with ExpressJS + Typescript Boilerplate:
+All you have been looking for with ExpressJS + Typescript + MongoDB:
 
 * Simple Clean Code Structure
 * Custom Error Handlings
-* Module Alias
+* Module Aliases
 * MongoDB Example
 * Existing Sample Code
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Feel free to play around ;)
 
 ### Prerequisites
 

@@ -1,6 +1,7 @@
 import PingController from '@controllers/PingController';
 import PostsController from '@controllers/PostsController';
 import UsersController from '@controllers/UsersController';
+import { NotFoundException } from '@libs/errors';
 import { Router } from 'express';
 
 export const router = Router();
@@ -22,5 +23,5 @@ router.delete('/posts/:postId', PostsController.destroy);
 
 // 404 Route Not Found
 router.all('*', (req, res) => {
-  throw new Error(`${req.method}:${req.url} endpoint does not exist`);
+  throw new NotFoundException(`${req.method} ${req.url} endpoint does not exist`);
 });

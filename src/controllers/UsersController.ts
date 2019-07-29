@@ -1,5 +1,5 @@
 import { RequestHandler } from 'express';
-import * as UserService from '@services/UserService';
+import UserService from '@services/UserService';
 
 const index: RequestHandler = async (req, res) => {
   const users = await UserService.list();

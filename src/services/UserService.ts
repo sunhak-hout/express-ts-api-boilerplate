@@ -1,14 +1,16 @@
 import { User } from '@models';
 
-export const list = async () => {
+const list = async () => {
   const users = await User.find();
   return users;
 };
 
-export const create = async (options: CreateOptions) => {
+const create = async (options: CreateOptions) => {
   const user = await User.create(options);
   return user;
 };
+
+export default { list, create };
 
 interface CreateOptions {
   firstName: string;
